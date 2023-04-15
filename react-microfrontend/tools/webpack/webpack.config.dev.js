@@ -19,9 +19,7 @@ module.exports = {
     open: true,
   },
   optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
+    splitChunks: false,
   },
   performance: {
     hints: false,

@@ -12,7 +12,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import Titlebar from './Titlebar';
-import logo from '@assets/images/logo.png';
 
 type Props = {
   title?: string;
@@ -51,7 +50,6 @@ const WindowFrame: React.FC<Props> = (props) => {
       <Titlebar
         title={props.title ?? 'Electron Window'}
         mode='centered-title'
-        icon={logo}
       />
       {/* Window Content (Application to render) */}
       <div className='window-content'>{props.children}</div>
