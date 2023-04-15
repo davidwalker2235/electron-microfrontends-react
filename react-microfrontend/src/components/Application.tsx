@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Application.scss';
 
 const Application: React.FC = () => {
-
+  
   return (
     <div id='erwt'>
       <div className='header'>

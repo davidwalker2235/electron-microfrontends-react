@@ -10,7 +10,7 @@ module.exports = [
         name: "dashboard",
         filename: "remoteEntry.js",
         remotes: {
-            'microfr': 'microfr@http://localhost:8081/remoteEntry.js'
+            'microfr': 'microfr@http://localhost:8080/remoteEntry.js'
         },
         shared: {},
         exposes: {},

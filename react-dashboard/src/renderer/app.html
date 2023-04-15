@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' https://somedomain.com/ 'unsafe-inline' 'unsafe-eval';  media-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' http://localhost:8080 https://somedomain.com/ 'unsafe-inline' 'unsafe-eval';  media-src *;connect-src https://cat-fact.herokuapp.com 'unsafe-inline'">
     <title>ERWT Boilerplate</title>
   </head>
   <body>
     <div id="app"></div>
-    <script src="http://localhost:8081/remoteEntry.js"></script>
+    <script src="http://localhost:8080/remoteEntry.js"></script>
   </body>
 </html>

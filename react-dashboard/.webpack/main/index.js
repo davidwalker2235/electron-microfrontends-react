@@ -24555,7 +24555,7 @@ function createAppWindow() {
             contextIsolation: true,
             nodeIntegrationInWorker: false,
             nodeIntegrationInSubFrames: false,
-            preload: '/Users/david.carmona/Projects/Poc/react-dashboard/.webpack/renderer/app_window/preload.js',
+            preload: '/home/baiv/projects/electron-microfrontends-react/react-dashboard/.webpack/renderer/app_window/preload.js',
             sandbox: false,
         },
     });

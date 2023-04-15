@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Application.scss';
-import { icons } from './Icons';
 // @ts-ignore
 const Micro = React.lazy(() => import('microfr/Application'))
+const Test = React.lazy(() => import('./Test'))
 
 const Application: React.FC = () => {
   const [counter, setCounter] = useState(0);
@@ -48,6 +48,16 @@ const Application: React.FC = () => {
     setDarkTheme(!darkTheme);
   }
 
+  useEffect(() => {
+    (async () => {
+      try{
+      const test = await fetch('https://cat-fact.herokuapp.com/facts');
+      console.log(JSON.stringify(Test));
+    }catch(e){
+      console.log('error: :', e)
+    }
+      })()
+  }, [])
   return (
     <div id='erwt'>
       <div className='header'>
@@ -55,7 +65,7 @@ const Application: React.FC = () => {
           <h1 className='themed'>ERWT - Electron Boilerplate</h1>
         </div>
       </div>
-      <React.Suspense fallback={<div>fail</div>}>
+      <React.Suspense>
         <Micro />
       </React.Suspense>
     </div>
