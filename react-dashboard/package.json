@@ -84,6 +84,7 @@
     "external-remotes-plugin": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-rnd": "^10.4.1",
     "webpack-sources": "^3.2.3"
   }
 }

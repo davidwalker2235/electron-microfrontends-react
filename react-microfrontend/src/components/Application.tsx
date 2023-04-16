@@ -4,10 +4,10 @@ import './Application.scss';
 const Application: React.FC = () => {
   
   return (
-    <div id='erwt'>
+    <div id='mfOne'>
       <div className='header'>
         <div className='main-heading'>
-          <h1 className='themed'>React Webpack Typescript</h1>
+          <h1 className='themed'>Microfrontend one</h1>
         </div>
         <div className='main-teaser'>
           <div>

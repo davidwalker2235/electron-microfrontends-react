@@ -8,11 +8,11 @@ const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = [
   new ModuleFederationPlugin({
-    name: "microfr2",
+    name: "microfrtwo",
     filename: "remoteEntry.js",
     remotes: {},
     exposes: {
-      './Application2': './src/components/Application',
+      './Applicationtwo': './src/components/Applicationtwo',
     },
     shared: {},
   }),

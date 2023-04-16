@@ -221,7 +221,7 @@ button {
   }
 }
 
-#erwt {
+#mfOne {
   // user-select: none;
   display: flex;
   flex-direction: column;
@@ -231,6 +231,7 @@ button {
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 0 20px 4px #00000000;
+  background-color: #d3d3d3;
 
   .header {
     padding: 3rem 2rem 0rem 2rem;
