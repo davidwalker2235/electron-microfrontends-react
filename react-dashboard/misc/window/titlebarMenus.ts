@@ -143,10 +143,10 @@ const titlebarMenus: TitlebarMenu[] = [
     name: 'Author',
     items: [
       {
-        name: 'Guasam',
+        name: 'ERNI',
         action: 'open_url',
-        value: 'https://github.com/guasam',
-        shortcut: '@guasam',
+        value: 'https://www.betterask.erni/',
+        shortcut: '@betteraskerni',
       },
     ],
   },
