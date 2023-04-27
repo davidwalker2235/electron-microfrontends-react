@@ -50,7 +50,7 @@ module.exports = {
       config: {
         // Fix content-security-policy error when image or video src isn't same origin
         // Remove 'unsafe-eval' to get rid of console warning in development mode.
-        devContentSecurityPolicy: `default-src 'self' 'unsafe-inline' data:; script-src 'self' http://localhost:8080 http://localhost:8081 'unsafe-inline' data:;connect-src https://cat-fact.herokuapp.com 'unsafe-inline'`,
+        devContentSecurityPolicy: `script-src 'self' 'unsafe-eval' 'unsafe-inline' data: http://localhost:8080/ http://localhost:8081/ 'nonce-ABC123'`,
         // Ports
         port: 3000, // Webpack Dev Server port
         loggerPort: 9000, // Logger port

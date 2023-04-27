@@ -89,7 +89,7 @@ export const registerTitlebarIpc = (mainWindow: BrowserWindow) => {
     mainWindow.setFullScreen(!mainWindow.fullScreen);
   });
 
-  ipcMain.handle('open-url', (e, url) => {
-    shell.openExternal(url);
+  ipcMain.handle('open-path', (e, path) => {
+    shell.openPath(path).then((res) => console.log(res));
   });
 };
