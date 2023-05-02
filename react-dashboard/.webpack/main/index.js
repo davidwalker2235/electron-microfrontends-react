@@ -24510,6 +24510,9 @@ const registerTitlebarIpc = (mainWindow) => {
     electron__WEBPACK_IMPORTED_MODULE_0__.ipcMain.handle('open-path', (e, path) => {
         electron__WEBPACK_IMPORTED_MODULE_0__.shell.openPath(path).then((res) => console.log(res));
     });
+    electron__WEBPACK_IMPORTED_MODULE_0__.ipcMain.handle('cpu-data', () => {
+        return process.getCPUUsage();
+    });
 };
 
 
@@ -24542,8 +24545,8 @@ let appWindow;
 function createAppWindow() {
     // Create new window instance
     appWindow = new electron__WEBPACK_IMPORTED_MODULE_0__.BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 768,
         backgroundColor: '#202020',
         show: false,
         autoHideMenuBar: true,

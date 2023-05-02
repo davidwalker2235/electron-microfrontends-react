@@ -14,7 +14,15 @@ module.exports = [
     exposes: {
       './Applicationtwo': './src/components/Applicationtwo',
     },
-    shared: {},
+    shared: { react: {
+        eager: true,
+        singleton: true,
+        requiredVersion: '^18.2.0'
+      }, "react-dom": {
+        eager: true,
+        singleton: true,
+        requiredVersion: '^18.2.0'
+      } },
   }),
   new ForkTsCheckerWebpackPlugin(),
   inDev() && new webpack.HotModuleReplacementPlugin(),

@@ -92,4 +92,7 @@ export const registerTitlebarIpc = (mainWindow: BrowserWindow) => {
   ipcMain.handle('open-path', (e, path) => {
     shell.openPath(path).then((res) => console.log(res));
   });
+  ipcMain.handle('cpu-data', () => {
+    return process.getCPUUsage();
+  });
 };

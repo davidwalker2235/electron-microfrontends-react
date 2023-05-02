@@ -13,7 +13,15 @@ module.exports = [
             'microfr': 'microfr@http://localhost:8080/remoteEntry.js',
             'microfrtwo': 'microfrtwo@http://localhost:8081/remoteEntry.js'
         },
-        shared: {},
+        shared: { react: {
+                eager: true,
+                singleton: true,
+                requiredVersion: '^18.2.0'
+            }, "react-dom": {
+                eager: true,
+                singleton: true,
+                requiredVersion: '^18.2.0'
+            } },
         exposes: {},
     }),
   new ForkTsCheckerWebpackPlugin(),
