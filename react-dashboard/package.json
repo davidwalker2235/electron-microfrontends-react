@@ -82,6 +82,7 @@
     "@module-federation/concat-runtime": "0.0.1",
     "electron-squirrel-startup": "^1.0.0",
     "external-remotes-plugin": "^1.0.0",
+    "node-disk-info": "^1.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-rnd": "^10.4.1",

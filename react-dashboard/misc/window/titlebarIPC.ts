@@ -1,16 +1,6 @@
-/**
- * Copyright (c) 2021, Guasam
- *
- * This software is provided "as-is", without any express or implied warranty. In no event
- * will the authors be held liable for any damages arising from the use of this software.
- * Read the LICENSE file for more details.
- *
- * @author  : guasam
- * @project : Electron Window
- * @package : Titlebar IPC (Main Process)
- */
-
 import { BrowserWindow, ipcMain, shell } from 'electron';
+import {getDiskSpace} from "@misc/window/utils";
+import {getDiskInfo} from 'node-disk-info';
 
 export const registerTitlebarIpc = (mainWindow: BrowserWindow) => {
   ipcMain.handle('window-minimize', () => {
@@ -94,5 +84,8 @@ export const registerTitlebarIpc = (mainWindow: BrowserWindow) => {
   });
   ipcMain.handle('cpu-data', () => {
     return process.getCPUUsage();
+  });
+  ipcMain.handle('get-disk-space', async () => {
+    return await getDiskInfo();
   });
 };
