@@ -8,7 +8,6 @@ const hostContext = {
     return await ipcRenderer.invoke('cpu-data');
   },
   async get_disk_space() {
-    debugger;
     return await ipcRenderer.invoke('get-disk-space');
   },
 };

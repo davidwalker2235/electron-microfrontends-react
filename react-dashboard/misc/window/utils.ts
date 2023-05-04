@@ -4,10 +4,7 @@ export const getDiskSpace = async () => {
   const nodeDiskInfo = require('node-disk-info');
 
   try {
-    const disks = await nodeDiskInfo.getDiskInfo();
-    console.log(disks)
-    debugger;
-    return disks;
+    return await nodeDiskInfo.getDiskInfo();
   } catch (e) {
     console.error(e);
   }

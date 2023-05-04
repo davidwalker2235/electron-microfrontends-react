@@ -3,18 +3,18 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 
 interface PieChartProps {
-  numbers?: number[]
+  info?: {total: number, used: number}
 }
 
-const PieChart = ({numbers = []}: PieChartProps) => {
+const PieChart = ({info = {total: 0, used: 0}}: PieChartProps) => {
   ChartJS.register(ArcElement, Tooltip, Legend);
 
   const data = {
-    labels: ['Red', 'Blue'],
+    labels: ['Total', 'Used'],
     datasets: [
       {
         label: '# of Votes',
-        data: [12, 19],
+        data: [info.total, info.used],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',

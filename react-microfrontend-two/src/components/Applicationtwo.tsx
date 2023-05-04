@@ -4,12 +4,13 @@ import './Applicationtwo.scss';
 import PieChart from "@src/components/pieChart";
 
 const Applicationtwo = () => {
-  const [freeDiskSpace, setFreeDiskSpace] = useState(0)
+  const [freeDiskSpace, setFreeDiskSpace] = useState({total: 0, used: 0})
   useEffect(() => {
     const fetch = async (key: string) => {
-      const value = await handleAction(key)
-      debugger;
-      console.log(value);
+      const value: any = await handleAction(key);
+      if (!!value && value?.length > 0) {
+        setFreeDiskSpace({total: value[0]._blocks, used: value[0]._used})
+      }
     }
     fetch('get_disk_space');
   }, [])
@@ -33,11 +34,11 @@ const Applicationtwo = () => {
         </div>
         <div className='mf-two-main-teaser'>
           <div>
-            <PieChart />
+            <PieChart info={freeDiskSpace}/>
           </div>
-          <div>
-            <button onClick={() => handleAction('open_path', '/Users')}>open path</button>
-          </div>
+        </div>
+        <div style={{display: "flex", justifyContent: "center", paddingTop: "10px"}}>
+          <button onClick={() => handleAction('open_path', '/Users')}>open path</button>
         </div>
       </div>
     </div>
